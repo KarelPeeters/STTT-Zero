@@ -9,14 +9,14 @@ fn main() {
     lower_process_priority();
 
     let settings = Settings {
-        position_count: 1_000,
-        output_path: "../data/loop/games_0.csv".to_owned(),
+        position_count: 2_100_000,
+        output_path: "../data/esat2/all_data.csv".to_owned(),
 
         move_selector: MoveSelector {
             inf_temp_move_count: 20
         },
 
-        generator: ZeroGeneratorSettings {
+        /*generator: ZeroGeneratorSettings {
             /*
             network: GoogleTorchNetworkSettings {
                 devices: all_cuda_devices(),
@@ -35,16 +35,16 @@ fn main() {
             batch_size: 1000,
             iterations: 1000,
             exploration_weight: 1.0,
-        },
+        },*/
 
-        /*
+
         generator: MCTSGeneratorSettings {
-            thread_count: 4,
+            thread_count: 32,
 
-            iterations: 1_000,
+            iterations: 50_000,
             exploration_weight: 1.0,
         },
-        */
+
     };
     settings.run();
 }
