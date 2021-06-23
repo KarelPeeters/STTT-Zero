@@ -14,14 +14,15 @@ use rand::Rng;
 use sttt::board::{Board, Player};
 
 pub use generate_mcts::MCTSGeneratorSettings;
-pub use generate_zero::GoogleOnnxSettings;
-pub use generate_zero::GoogleTorchSettings;
-pub use generate_zero::NetworkSettings;
-pub use generate_zero::ZeroGeneratorSettings;
+
+// pub use generate_zero::GoogleOnnxSettings;
+// pub use generate_zero::GoogleTorchSettings;
+// pub use generate_zero::NetworkSettings;
+// pub use generate_zero::ZeroGeneratorSettings;
 
 mod collect;
-mod generate_zero;
 mod generate_mcts;
+// mod generate_zero;
 
 #[derive(Debug)]
 pub struct Settings<G: Generator> {

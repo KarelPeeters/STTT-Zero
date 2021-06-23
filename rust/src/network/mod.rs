@@ -2,8 +2,8 @@ use itertools::Itertools;
 use sttt::board::{Board, Coord};
 
 pub mod dummy;
-pub mod google_torch;
-pub mod google_onnx;
+// pub mod google_torch;
+// pub mod google_onnx;
 
 #[derive(Debug)]
 pub struct NetworkEvaluation {
