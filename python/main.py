@@ -53,7 +53,7 @@ def main():
     # )
 
     settings = TrainSettings(
-        output_path="../data/esat/modest",
+        output_path="../data/esat2/modest",
         train_data=train_data,
         test_data=test_data,
         epochs=5,
