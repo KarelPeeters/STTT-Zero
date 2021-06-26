@@ -1,14 +1,7 @@
-#![allow(unused_imports)]
-
 use sttt::util::lower_process_priority;
-use tch::Device;
 
-use sttt_zero::network::google_onnx::GoogleOnnxNetwork;
-use sttt_zero::network::google_torch::GoogleTorchNetwork;
 use sttt_zero::selfplay::{MoveSelector, Settings};
-use sttt_zero::selfplay::generate_mcts::MCTSGeneratorSettings;
 use sttt_zero::selfplay::generate_zero::settings_onnx::GoogleOnnxSettings;
-use sttt_zero::selfplay::generate_zero::settings_torch::GoogleTorchSettings;
 use sttt_zero::selfplay::generate_zero::ZeroGeneratorSettings;
 
 fn main() {
