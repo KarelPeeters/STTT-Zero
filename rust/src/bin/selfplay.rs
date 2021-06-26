@@ -24,10 +24,9 @@ fn main() {
 
         generator: ZeroGeneratorSettings {
             batch_size: 1000,
-            network: GoogleTorchSettings {
-                path: "../data/esat2/modest/model_5_epochs.pt".to_owned(),
-                devices: vec![Device::Cuda(0), Device::Cuda(1)],
-                threads_per_device: 2,
+            network: GoogleOnnxSettings {
+                path: "../data/esat2/modest/model_5_epochs.onnx".to_owned(),
+                num_threads: 4,
             },
             iterations: 5_000,
             exploration_weight: 1.0,
