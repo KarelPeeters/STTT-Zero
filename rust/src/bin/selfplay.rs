@@ -1,11 +1,14 @@
 #![allow(unused_imports)]
 
 use sttt::util::lower_process_priority;
+use tch::Device;
 
 use sttt_zero::network::google_onnx::GoogleOnnxNetwork;
+use sttt_zero::network::google_torch::GoogleTorchNetwork;
 use sttt_zero::selfplay::{MoveSelector, Settings};
 use sttt_zero::selfplay::generate_mcts::MCTSGeneratorSettings;
 use sttt_zero::selfplay::generate_zero::settings_onnx::GoogleOnnxSettings;
+use sttt_zero::selfplay::generate_zero::settings_torch::GoogleTorchSettings;
 use sttt_zero::selfplay::generate_zero::ZeroGeneratorSettings;
 
 fn main() {
@@ -21,9 +24,10 @@ fn main() {
 
         generator: ZeroGeneratorSettings {
             batch_size: 1000,
-            network: GoogleOnnxSettings {
-                path: "../data/esat2/moderate/model_5_epochs.onnx".to_owned(),
-                num_threads: 4,
+            network: GoogleTorchSettings {
+                path: "../data/esat2/modest/model_5_epochs.pt".to_owned(),
+                devices: vec![Device::Cuda(0), Device::Cuda(1)],
+                threads_per_device: 2,
             },
             iterations: 5_000,
             exploration_weight: 1.0,
