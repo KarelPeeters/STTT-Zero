@@ -2,6 +2,7 @@ use itertools::Itertools;
 use sttt::board::{Board, Coord};
 
 pub mod dummy;
+pub mod google_tract;
 
 #[cfg(feature = "torch")]
 pub mod google_torch;
