@@ -14,7 +14,7 @@ fn main() {
 
     let settings = Settings {
         game_count: 2_000_000,
-        output_path: "../data/derp/derp_games.csv".to_owned(),
+        output_path: "../data/esat3/games.csv".to_owned(),
 
         move_selector: MoveSelector {
             inf_temp_move_count: 20
