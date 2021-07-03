@@ -8,7 +8,7 @@ fn main() {
     lower_process_priority();
 
     let settings = Settings {
-        game_count: 2_000_000,
+        game_count: 20_000,
         output_path: "../data/esat3/games.csv".to_owned(),
 
         move_selector: MoveSelector {
@@ -16,8 +16,8 @@ fn main() {
         },
 
         generator: MCTSGeneratorSettings {
-            thread_count: 16,
-            iterations: 200_000,
+            thread_count: 20,
+            iterations: 100_000,
             exploration_weight: 2.0,
         },
     };
