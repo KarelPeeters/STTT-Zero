@@ -9,7 +9,7 @@ from train import TrainSettings, ValueTarget
 
 def main():
     selfplay_settings = SelfplaySettings(
-        game_count=10_000,
+        game_count=512,
         inf_temp_move_count=20,
         keep_tree=False,
         dirichlet_alpha=1.0,
@@ -21,7 +21,7 @@ def main():
     )
 
     train_settings = TrainSettings(
-        epochs=2,
+        epochs=1,
         value_target=ValueTarget.FinalValue,
         policy_weight=2.0,
         batch_size=256,
@@ -41,7 +41,7 @@ def main():
         root_path=root_path,
         initial_network=initial_path,
         generations=100,
-        buffer_gen_count=10,
+        buffer_gen_count=5,
         selfplay_settings=selfplay_settings,
         train_settings=train_settings,
         train_weight_decay=1e-5,
